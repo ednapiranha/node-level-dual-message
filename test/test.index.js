@@ -7,11 +7,8 @@ var child = require('child_process');
 var LevelDualMessage = require('../index');
 
 var m = new LevelDualMessage('jane', {
-  db: './test/db',
-  frequency: 1
+  db: './test/db'
 });
-
-var ttl = 10;
 
 var message = {
   text: 'hi'

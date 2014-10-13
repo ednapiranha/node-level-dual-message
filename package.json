@@ -6,7 +6,6 @@
   "dependencies": {
     "level": "~0.18.0",
     "level-sublevel": "~6.3.15",
-    "level-ttl": "~2.1.0",
     "concat-stream": "~1.4.6"
   },
   "devDependencies": {
