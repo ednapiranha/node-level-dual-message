@@ -51,7 +51,7 @@ var LevelDualMessage = function (user, options) {
     });
   };
 
-  this.add = function (receiver, message, isPublic, options, next) {
+  this.add = function (receiver, message, isPublic, next) {
     if (!message) {
       next(new Error('message cannot be empty'));
       return;
