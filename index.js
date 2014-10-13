@@ -73,6 +73,19 @@ var LevelDualMessage = function (user, options) {
       self.messagesLevel = null;
     });
   };
+
+  this.del = function (key, receiver, isPublic, next) {
+    setMessageType(receiver, isPublic);
+
+    this.messagesLevel.del(key, function (err) {
+      if (err) {
+        next(err);
+        return;
+      }
+
+      next(null, true);
+    });
+  };
 };
 
 module.exports = LevelDualMessage;
