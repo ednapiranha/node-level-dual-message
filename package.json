@@ -1,0 +1,26 @@
+{
+  "name": "level-dual-message",
+  "version": "1.0.0",
+  "description": "One-to-one messaging with public/private views",
+  "main": "index.js",
+  "dependencies": {
+    "level": "~0.18.0",
+    "level-sublevel": "~6.3.15",
+    "level-ttl": "~2.1.0",
+    "concat-stream": "~1.4.6"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.5",
+    "should": "~4.0.4"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --timeout 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ednapiranha/node-level-dual-message.git"
+  },
+  "keywords": ["leveldb", "messaging", "ttl", "ephemeral"],
+  "author": "Edna Piranha <jen@ednapiranha.com> (http://ednapiranha.com)",
+  "license": "BSD"
+}
