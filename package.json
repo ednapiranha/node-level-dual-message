@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git://github.com/ednapiranha/node-level-dual-message.git"
   },
-  "keywords": ["leveldb", "messaging", "ttl", "ephemeral"],
+  "keywords": ["leveldb", "messaging"],
   "author": "Edna Piranha <jen@ednapiranha.com> (http://ednapiranha.com)",
   "license": "BSD"
 }
