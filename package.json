@@ -1,6 +1,6 @@
 {
   "name": "level-dual-message",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "One-to-one messaging with public/private views",
   "main": "index.js",
   "dependencies": {

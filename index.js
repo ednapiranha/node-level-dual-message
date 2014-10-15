@@ -34,6 +34,10 @@ var LevelDualMessage = function (user, options) {
   this.getRecent = function (user, isPublic, key, reverse, next) {
     setMessageType(user, isPublic);
 
+    if (!key) {
+      key = 0;
+    }
+
     var rs = this.messagesLevel.createReadStream({
       start: key,
       reverse: reverse || false,
@@ -60,9 +64,9 @@ var LevelDualMessage = function (user, options) {
     setMessageType(receiver, isPublic);
 
     var created = setTime();
+    message.created = Math.floor(created / 1000);
     var content = {
-      message: message,
-      created: created
+      message: message
     };
 
     this.messagesLevel.put(created, content, function (err) {

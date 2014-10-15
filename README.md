@@ -11,7 +11,7 @@ Allows one-to-one messaging to save between a public or private stream.
     });
 
     // Parameters are: receiver name, message content, is public?, callback
-    m.add('bob', 'hi random text', true, false, function (err, created) {
+    m.add('bob', 'hi random text', true, function (err, created) {
 
       // Parameters are: reciever name, is public?, reverse message order?, start key (or false), callback
       m.getRecent('bob', true, false, false, function (err, msgs) {
