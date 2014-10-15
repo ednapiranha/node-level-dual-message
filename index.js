@@ -31,15 +31,10 @@ var LevelDualMessage = function (user, options) {
     }
   };
 
-  this.getRecent = function (user, isPublic, key, reverse, next) {
+  this.getRecent = function (user, isPublic, reverse, next) {
     setMessageType(user, isPublic);
 
-    if (!key) {
-      key = 0;
-    }
-
     var rs = this.messagesLevel.createReadStream({
-      start: key,
       reverse: reverse || false,
       limit: self.limit
     });

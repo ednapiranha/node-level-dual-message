@@ -31,7 +31,7 @@ describe('LevelDualMessage', function () {
   it('should add a public message', function (done) {
     m.add('bob', message, true, function (err, created) {
       should.exist(created);
-      m.getRecent('bob', true, false, false, function (err, msgs) {
+      m.getRecent('bob', true, false, function (err, msgs) {
         should.exist(msgs);
         done();
       });
@@ -42,7 +42,7 @@ describe('LevelDualMessage', function () {
     m.add('bob', message, false, function (err, created) {
       should.exist(created);
       key = created;
-      m.getRecent('bob', false, false, false, function (err, msgs) {
+      m.getRecent('bob', false, false, function (err, msgs) {
         should.exist(msgs);
         done();
       });
@@ -52,7 +52,7 @@ describe('LevelDualMessage', function () {
   it('should delete a message', function (done) {
     m.del(key, 'bob', false, function (err, result) {
       should.not.exist(err);
-      m.getRecent('bob', false, false, false, function (err, msgs) {
+      m.getRecent('bob', false, false, function (err, msgs) {
         msgs.messages.length.should.equal(0);
         done();
       });
